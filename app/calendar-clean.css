@@ -28,11 +28,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans K
 .day-column.today-col{background:#fff}
 .week-slot{height:64px;border-color:#eeeeee}
 .week-slot:hover{background:#f8f9fa}
-.week-event{left:3px;right:3px;border-left:3px solid;border-radius:3px;padding:5px 6px;box-shadow:none;transition:none;color:#303134}
-.week-event:hover{transform:none;filter:brightness(.98);box-shadow:none}
-.week-event small{font-size:8px;color:#5f6368;font-weight:500}
-.week-event strong{font-size:10px;line-height:1.25;margin:2px 0;font-weight:600}
-.week-event span{font-size:8px;color:#5f6368}
+.week-event{left:2px;right:2px;border:0;border-radius:3px;padding:6px 7px;box-shadow:none;transition:none;color:#fff;outline:1px solid #ffffff24;outline-offset:-1px}
+.week-event:hover{transform:none;filter:brightness(.94);box-shadow:none}
+.week-event strong{font-size:11px;line-height:1.25;margin:0 0 3px;font-weight:650;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.week-event span{font-size:9px;color:#ffffffd4;font-weight:450;white-space:nowrap}
 .week-agenda{padding:0;background:#fff;border-top:1px solid var(--hairline)}
 .agenda-bar{width:100%;height:48px;padding:0 18px;border:0;background:#fff;display:flex;align-items:center;justify-content:space-between;font-size:12px;cursor:pointer;color:#3c4043}
 .agenda-bar:hover{background:#f8f9fa}
