@@ -71,6 +71,19 @@ body.resizing-panel *{cursor:col-resize!important}
 .modal{border-radius:8px;box-shadow:0 12px 36px #20212430}
 .modal-head p{color:var(--blue);letter-spacing:0}
 .category-row button{border-radius:4px}
+.category-settings-trigger{position:fixed;right:18px;bottom:18px;z-index:25;border:1px solid #dadce0;border-radius:18px;background:#fff;color:#5f6368;padding:8px 13px;box-shadow:0 2px 8px #2021241f;font-size:11px;font-weight:600;cursor:pointer}
+.category-settings-trigger:hover{background:#f8f9fa;color:#202124}
+.category-manager{width:min(390px,calc(100vw - 32px))}
+.category-manager-list{display:flex;flex-direction:column;gap:7px;margin:4px 0 16px}
+.category-manager-row{display:grid;grid-template-columns:34px minmax(0,1fr) 30px;align-items:center;gap:8px}
+.category-color-input,.category-add-form input[type="color"]{width:34px;height:32px;padding:2px;border:1px solid #dadce0;border-radius:5px;background:#fff;cursor:pointer}
+.category-name-input,.category-add-form input:not([type="color"]){min-width:0;height:34px;border:1px solid #dadce0;border-radius:4px;padding:0 10px;font-size:12px;outline:0}
+.category-name-input:focus,.category-add-form input:not([type="color"]):focus{border-color:var(--blue)}
+.category-manager-row>button{width:30px;height:30px;border:0;border-radius:50%;background:transparent;color:#8a8d91;font-size:17px;cursor:pointer}
+.category-manager-row>button:hover:not(:disabled){background:#f1f3f4;color:#d93025}.category-manager-row>button:disabled{opacity:.25;cursor:not-allowed}
+.category-add-form{display:grid;grid-template-columns:34px minmax(0,1fr) 52px;gap:8px;padding-top:14px;border-top:1px solid var(--hairline)}
+.category-add-form button{border:0;border-radius:4px;background:var(--blue);color:#fff;font-size:11px;font-weight:650;cursor:pointer}
+.category-manager-help{margin:10px 0 0;color:#8a8d91;font-size:9px;line-height:1.5}
 .modal input,.modal textarea{border-radius:4px;background:#fff}
 .modal-actions button{border-radius:4px}
 .label-help{margin-left:6px;color:#9aa0a6;font-size:9px;font-weight:400}
