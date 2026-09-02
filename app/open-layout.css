@@ -1,0 +1,74 @@
+/* Calendar is the page surface: no nested panel scrolling. */
+body { background: #fff; }
+
+.topbar {
+  padding-left: clamp(24px, 4vw, 72px);
+  padding-right: clamp(24px, 4vw, 72px);
+}
+
+.page-head {
+  max-width: none;
+  margin: 0;
+  padding: 48px clamp(24px, 4vw, 72px) 30px;
+}
+
+.layout {
+  max-width: none;
+  margin: 0;
+  padding: 0 clamp(24px, 4vw, 72px) 80px;
+  grid-template-columns: minmax(620px, 1fr) 340px;
+  gap: 48px;
+}
+
+.timeline-card {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.timeline-head {
+  position: sticky;
+  top: 74px;
+  z-index: 10;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+.timeline {
+  height: auto;
+  overflow: visible;
+  grid-template-columns: 88px minmax(0, 1fr);
+}
+
+.hour-labels {
+  background: #fff;
+  padding-right: 22px;
+}
+
+.grid-area {
+  background: linear-gradient(90deg, transparent 49%, #f8f7fb 49%, #f8f7fb 49.1%, transparent 49.1%);
+}
+
+.event { left: 22px; right: 22px; }
+aside { top: 104px; gap: 20px; }
+.summary-card, .agenda-card { box-shadow: 0 14px 40px #3530520d; }
+
+@media (max-width: 1000px) {
+  .layout { grid-template-columns: 1fr; gap: 28px; }
+  .timeline-card { order: 2; }
+  aside { order: 1; position: static; grid-template-columns: 1fr 1fr; }
+  .timeline-head { top: 74px; }
+}
+
+@media (max-width: 600px) {
+  .page-head { padding-left: 16px; padding-right: 16px; }
+  .layout { padding: 0 16px 48px; grid-template-columns: minmax(0, 1fr); }
+  aside { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 68px minmax(0, 1fr); }
+  .timeline-head { grid-template-columns: 68px 1fr auto; }
+  .event { left: 10px; right: 10px; }
+}
